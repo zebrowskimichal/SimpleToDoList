@@ -1,0 +1,37 @@
+body {
+	background: linear-gradient(
+		90deg,
+		rgba(251, 63, 63, 1) 0%,
+		rgba(231, 0, 255, 1) 100%
+	);
+}
+hr {
+	width: 80%;
+}
+.container {
+	width: 60%;
+	margin: 0 auto;
+	background-color: white;
+}
+.baner {
+	padding: 2%;
+	text-align: center;
+	font-weight: bold;
+}
+.task {
+	display: flexbox;
+	border-radius: 25px;
+	width: 60%;
+	height: 3vh;
+	padding: 8px;
+	padding-left: 4%;
+	margin: 5px auto;
+	align-items: center;
+	box-shadow: 2px 3px 2px lightgrey;
+}
+.boxes {
+	display: flex;
+	float: right;
+	padding-right: 4%;
+	justify-content: space-between;
+}
