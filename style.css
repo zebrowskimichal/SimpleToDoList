@@ -4,23 +4,49 @@ body {
 		rgba(251, 63, 63, 1) 0%,
 		rgba(231, 0, 255, 1) 100%
 	);
+	background-size: 400% 400%;
+	height: 100vh;
+	animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 hr {
 	width: 80%;
 }
 .container {
-	width: 60%;
+	min-width: 300px;
+	width: 30%;
+	min-height: 400px;
 	margin: 0 auto;
 	background-color: white;
+	padding: 10px;
+	border-radius: 25px;
 }
 .baner {
 	padding: 2%;
 	text-align: center;
 	font-weight: bold;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.tasks {
+	min-height: 250px;
+	max-height: 400px;
+	overflow-y: auto;
 }
 .task {
-	display: flexbox;
+	display: flex;
+	justify-content: space-between;
 	border-radius: 25px;
+	border: 1px solid lightgray;
 	width: 60%;
 	height: 3vh;
 	padding: 8px;
@@ -30,8 +56,52 @@ hr {
 	box-shadow: 2px 3px 2px lightgrey;
 }
 .boxes {
-	display: flex;
+	position: relative;
 	float: right;
-	padding-right: 4%;
-	justify-content: space-between;
+	width: 18px;
+	height: 18px;
+	margin-right: 4%;
+	border: 1px solid grey;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: white;
+}
+.boxes:focus {
+	background-color: green;
+}
+.textInput {
+	border: 0;
+	width: 80%;
+	height: 100%;
+	margin: 0 left;
+}
+.addInput {
+	position: relative;
+	float: right;
+	width: 50px;
+	height: 25px;
+	margin-right: 4%;
+	border: 1px solid grey;
+	border-radius: 15px;
+	cursor: pointer;
+	background-color: white;
+}
+.textInput:focus {
+	outline: none;
+}
+.deleted {
+	animation: deleted 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes deleted {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+footer {
+	position: absolute;
+	bottom: 0;
 }
