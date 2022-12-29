@@ -48,7 +48,7 @@ hr {
 	border-radius: 25px;
 	border: 1px solid lightgray;
 	width: 60%;
-	height: 3vh;
+	height: auto;
 	padding: 8px;
 	padding-left: 4%;
 	margin: 5px auto;
@@ -102,6 +102,6 @@ hr {
 	}
 }
 footer {
-	position: absolute;
-	bottom: 0;
+	position: fixed;
+	bottom: 5px;
 }
